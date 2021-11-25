@@ -5,4 +5,4 @@ def median(numbers):
     n = len(numbers)
     if(n&1):
         return numbers[n>>1]
-    return (numbers[(n-1)>>1]+numbers[(n+1)>>1])>>1
+    return (numbers[(n-1)>>1]+numbers[(n+1)>>1])/2.0
