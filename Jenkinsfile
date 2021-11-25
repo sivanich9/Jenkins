@@ -1,21 +1,14 @@
 pipeline { 
-agent any
+    agent any
     stages {
-        stage('Clone Git') {
+        stage('Run Code') {
             steps {
-                git 'https://github.com/sivanich9/Jenkins.git'
+                sh "/usr/bin/python3 program.py"
             }
         }
-        stage('Build Code') {
+        stage('Test Code') {
             steps {
-                sh "chmod u+x program.py"
-                sh "./program.py"
-            }
-        }
-     stage('Test Code') {
-            steps {
-                sh "chmod u+x Test.py"
-                sh "./Test.py"
+                sh "/usr/bin/python3 test.py"
             }
         }
     } 
