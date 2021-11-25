@@ -8,7 +8,7 @@ class TestMean(unittest.TestCase):
     def test1(self):
         data = [1,2,3]
         result = median(data)
-        self.assertEqual(result, 2)
+        self.assertEqual(result, 3)
 
     def test2(self):
         data = [1,2,3,4]
